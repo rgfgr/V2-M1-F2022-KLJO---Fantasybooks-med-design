@@ -21,7 +21,8 @@ a{
 
 /* Header */
 header h1{
-    color: #fe7d4e;
+    color: #333;
+    display: inline;
 }
 .headflex{
     display: flex;
@@ -33,11 +34,16 @@ header h1{
     grid-template-columns: repeat(4, auto);
     place-items: center;
     column-gap: 30px;
+    font-weight: 800;
+    font-size: larger;
 }
 .opbrug{
     color: #fe7d4e;
     border-radius: 50px;
     padding: 15px 30px;
+}
+.overskrift h1:first-child{
+    color: #fe7d4e;
 }
 
 /* hero */
