@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 *{
-    background-color: #fff7f3;
+    max-width: 1900px;
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
 }
+body{
+    overflow-x: hidden;
+}
+main{
+    background-color: #fff7f3;
+}
 .maanbog{
     background-color: #fefdf9;
 }
-.harry *{
+.harry{
     background-color: #fef2f2;
 }
 .btn, .bogcover{
@@ -18,9 +24,6 @@ a{
     display: inline;
     text-decoration: none;
     color: #333;
-}
-main a::after{
-    content: url(img/arrow-icon.svg);
 }
 
 /* Header */
@@ -90,17 +93,21 @@ main{
                    "maanbog maanbog maanbog" auto
                    ". . ." 170px
                    "bogklub bogklub bogklub" auto
-                   ". . ." 170px / 200px auto 200px;
+                   ". . ." 170px / 200px 1fr 200px;
     place-items: center;
 }
 
-/* secondhand grid */
+/* secondhand */
 #gridtitle{
     grid-area: title;
+    font-size: 33px;
+    font-weight: 900;
 }
 #visflere{
     grid-area: flere;
     place-self: end;
+    font-size: 20px;
+    font-weight: 900;
 }
 .cover1{
     grid-area: cover1;
@@ -118,7 +125,151 @@ main{
     display: grid;
     grid-template: "title . . flere" auto
                    "cover1 cover2 cover3 cover4" 500px / 1fr 1fr 1fr 1fr;
-    gap: 10px 74px;
+    gap: 30px 74px;
 }
 
-/* secondhand */
+/* måneds bog */
+.infoommaan{
+    grid-area: maan;
+    place-self: center;
+    display: grid;
+    place-items: center;
+}
+.harry{
+    grid-area: harry;
+    display: grid;
+    place-items: center;
+}
+.harry div{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 100px;
+}
+.overskrift{
+    grid-area: overskrift;
+    font-size: 40px;
+    color: #543d32;
+}
+.forfatter{
+    grid-area: forfatter;
+    color: #707070;
+    font-weight: 700;
+    font-size: 20px;
+}
+.type{
+    grid-area: type;
+    color: #707070;
+    font-weight: 700;
+    font-size: 20px;
+}
+.navn{
+    grid-area: navn;
+    font-weight: 700;
+    font-size: 23px;
+}
+.typer{
+    grid-area: typer;
+    font-weight: 700;
+    font-size: 23px;
+}
+.boginfo{
+    grid-area: boginfo;
+    color: #707070;
+    font-size: 20px;
+}
+.bestilbog{
+    grid-area: bestilbog;
+}
+.bestilbog .btn{
+    background-color: #fe7d4e;
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 50px;
+}
+.infoombog{
+    width: 536px;
+    display: grid;
+    grid-template: "overskrift overskrift" auto
+                   ". ." 20px
+                   "forfatter type" auto
+                   "navn typer" auto
+                   ". ." 50px
+                   "boginfo boginfo" auto
+                   ". ." 80px
+                   "bestilbog ." auto / 160px auto;
+    gap: 10px 30px;
+}
+.maanbog{
+    display: grid;
+    grid-template: "maan harry" auto / 627px 1254px;
+}
+.infoommaan div{
+    width: 240px;
+}
+
+/* bogklub */
+.bogklub{
+    position: relative;
+}
+.bogklub p{
+    position: absolute;
+    top: 45%;
+    right: 783px;
+    background-color: #fe7d4e;
+    color: #fff;
+    padding: 20px 50px;
+    border-radius: 50px;
+    font-size: larger;
+    font-weight: 700;
+}
+
+/* footer */
+.hvor{
+    grid-area: hvor;
+}
+.tid{
+    grid-area: tid;
+}
+.tlf{
+    grid-area: tlf;
+}
+.mail{
+    grid-area: mail;
+}
+.social{
+    grid-area: social;
+    place-self: end start;
+}
+.social img{
+    width: 50px;
+}
+.footgrid{
+    place-self: center;
+    display: inline-grid;
+    gap: 20px 100px;
+    grid-template: "hvor tid" auto
+                   "tlf social" auto
+                   "mail social" auto / max-content max-content;
+    font-size: 20px;
+}
+footer{
+    display: grid;
+    grid-template-columns: auto 580px;
+}
+.footgrid div p:first-child{
+    color: #333;
+    font-weight: 700;
+}
+.hvor h4{
+    display: inline;
+    font-size: 25px;
+}
+.hvor h4:first-child{
+    color: #fe7d4e;
+}
+
+/* media */
+@media screen and (min-width: 1800){
+
+}
