@@ -5,18 +5,22 @@
     padding: 0;
     font-family: 'Open Sans', sans-serif;
 }
-.maanedbog{
+.maanbog{
     background-color: #fefdf9;
 }
-.harry{
+.harry *{
     background-color: #fef2f2;
 }
 .btn, .bogcover{
     box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3);
 }
 a{
+    display: inline;
     text-decoration: none;
     color: #333;
+}
+main a::after{
+    content: url(img/arrow-icon.svg);
 }
 
 /* Header */
@@ -67,3 +71,54 @@ header h1{
     font-size: 25px;
     width: 950px;
 }
+
+/* main grid */
+.secondhand{
+    grid-area: secondhand;
+}
+.maanbog{
+    grid-area: maanbog;
+}
+.bogklub{
+    grid-area: bogklub;
+}
+main{
+    display: grid;
+    grid-template: ". . ." 170px
+                   ". secondhand ." auto
+                   ". . ." 170px
+                   "maanbog maanbog maanbog" auto
+                   ". . ." 170px
+                   "bogklub bogklub bogklub" auto
+                   ". . ." 170px / 200px auto 200px;
+    place-items: center;
+}
+
+/* secondhand grid */
+#gridtitle{
+    grid-area: title;
+}
+#visflere{
+    grid-area: flere;
+    place-self: end;
+}
+.cover1{
+    grid-area: cover1;
+}
+.cover2{
+    grid-area: cover2;
+}
+.cover3{
+    grid-area: cover3;
+}
+.cover4{
+    grid-area: cover4;
+}
+.secondhand{
+    display: grid;
+    grid-template: "title . . flere" auto
+                   "cover1 cover2 cover3 cover4" 500px / 1fr 1fr 1fr 1fr;
+    gap: 10px 74px;
+}
+
+/* secondhand */
