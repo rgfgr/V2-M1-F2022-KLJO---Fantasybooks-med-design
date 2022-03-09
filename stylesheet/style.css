@@ -198,6 +198,7 @@ main{
     place-self: center;
     display: grid;
     place-items: center;
+    padding: 20px;
 }
 .harry{
     grid-area: harry;
@@ -255,7 +256,7 @@ main{
     border-radius: 50px;
 }
 .infoombog{
-    width: 100vw;
+    padding: 20px 10px;
     display: grid;
     grid-template: "overskrift overskrift" auto
                    ". ." 20px
@@ -264,7 +265,7 @@ main{
                    ". ." 50px
                    "boginfo boginfo" auto
                    ". ." 80px
-                   "bestilbog ." auto / 160px auto;
+                   "bestilbog ." auto / 80px 1fr;
     gap: 10px 30px;
 }
 .maanbog{
@@ -279,6 +280,9 @@ main{
 /* bogklub */
 .bogklub{
     position: relative;
+}
+.bogklub img{
+    width: 100vw;
 }
 .bogklub p{
     position: absolute;
