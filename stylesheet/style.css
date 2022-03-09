@@ -271,7 +271,7 @@ main{
 .bogklub p{
     position: absolute;
     top: 45%;
-    left: 40px;
+    left: 20px;
     background-color: #fe7d4e;
     color: #fff;
     padding: 20px 20px;
@@ -312,7 +312,6 @@ main{
 }
 footer{
     display: grid;
-    grid-template-columns: auto 580px;
 }
 .footgrid div p:first-child{
     color: #333;
@@ -330,148 +329,13 @@ footer > img{
 }
 
 /* media */
-@media screen and (min-width: 769px) and (max-width: 1899px){
-    /* Header */
-    .headflex{
-        padding: 30px 150px;
-    }
-    #menu{
-        grid-template-columns: repeat(4, auto);
-        place-items: center;
-        column-gap: 30px;
-        font-weight: 800;
-        font-size: larger;
-    }
-    .opbrug{
-        padding: 15px 30px;
-    }
-    
-    /* hero */
-    .hero img{
-        height: 900px;
-    }
-    .hero p{
-        top: 333.5px;
-        right: 476.5px;
-        font-size: 25px;
-        width: 950px;
-    }
-    
-    /* main grid */
-    main{
-        grid-template: ". . ." 170px
-                       ". secondhand ." auto
-                       ". . ." 170px
-                       "maanbog maanbog maanbog" auto
-                       ". . ." 170px
-                       "bogklub bogklub bogklub" auto
-                       ". . ." 170px / 200px 1fr 200px;
-    }
-    
-    /* secondhand */
-    #gridtitle{
-        font-size: 33px;
-        font-weight: 900;
-    }
-    #visflere{
-        font-size: 20px;
-        font-weight: 900;
-    }
-    .secondhand{
-        grid-template: "title . . flere" auto
-                       "cover1 cover2 cover3 cover4" 500px / 1fr 1fr 1fr 1fr;
-        gap: 30px 74px;
-    }
-    
-    /* måneds bog */
-    .harry div{
-        grid-template-columns: repeat(2, auto);
-        column-gap: 100px;
-    }
-    .overskrift{
-        font-size: 40px;
-    }
-    .forfatter{
-        font-weight: 700;
-        font-size: 20px;
-    }
-    .type{
-        font-weight: 700;
-        font-size: 20px;
-    }
-    .navn{
-        font-weight: 700;
-        font-size: 23px;
-    }
-    .typer{
-        font-weight: 700;
-        font-size: 23px;
-    }
-    .boginfo{
-        font-size: 20px;
-    }
-    .bestilbog .btn{
-        padding: 20px 40px;
-    }
-    .infoombog{
-        width: 536px;
-        grid-template: "overskrift overskrift" auto
-                       ". ." 20px
-                       "forfatter type" auto
-                       "navn typer" auto
-                       ". ." 50px
-                       "boginfo boginfo" auto
-                       ". ." 80px
-                       "bestilbog ." auto / 160px auto;
-        gap: 10px 30px;
-    }
-    .maanbog{
-        grid-template: "maan harry" auto / 627px 1254px;
-    }
-    .infoommaan div{
-        width: 240px;
-    }
-    
-    /* bogklub */
-    .bogklub p{
-        top: 45%;
-        right: 783px;
-        padding: 20px 50px;
-        font-size: larger;
-        font-weight: 700;
-    }
-    
-    /* footer */
-    .social{
-        place-self: end start;
-    }
-    .social img{
-        width: 50px;
-    }
-    .footgrid{
-        gap: 20px 100px;
-        grid-template: "hvor tid" auto
-                       "tlf social" auto
-                       "mail social" auto / max-content max-content;
-        font-size: 20px;
-    }
-    footer{
-        grid-template-columns: auto 580px;
-    }
-    .footgrid div p:first-child{
-        font-weight: 700;
-    }
-    .hvor h4{
-        font-size: 25px;
-    }
-}
-@media screen and (min-width: 1900px){
+@media screen and (min-width: 769px){
     /* Header */
     header h1{
         font-size: 50px;
     }
     .headflex{
-        padding: 30px 150px;
+        padding: 30px 70px;
     }
     #menu{
         display: grid;
@@ -480,9 +344,6 @@ footer > img{
         column-gap: 30px;
         font-weight: 800;
         font-size: larger;
-    }
-    .opbrug{
-        padding: 15px 30px;
     }
     /* hammenu */
     .menu-btn, .div1, .div2, .div3{
@@ -491,8 +352,6 @@ footer > img{
     .menu-btn:checked ~ #menu{
         display: grid;
         position: static;
-        top: 80px;
-        right: -100px;
         background: none;
         z-index: auto;
         padding: 0;
@@ -500,24 +359,24 @@ footer > img{
     
     /* hero */
     .hero img{
-        height: 900px;
+        height: 700px;
     }
     .hero p{
-        top: 333.5px;
-        right: 476.5px;
+        top: 233.5px;
+        right: 37px;
         font-size: 25px;
         width: 950px;
     }
     
     /* main grid */
     main{
-        grid-template: ". . ." 170px
+        grid-template: ". . ." 100px
                        ". secondhand ." auto
-                       ". . ." 170px
+                       ". . ." 100px
                        "maanbog maanbog maanbog" auto
-                       ". . ." 170px
+                       ". . ." 100px
                        "bogklub bogklub bogklub" auto
-                       ". . ." 170px / 200px 1fr 200px;
+                       ". . ." 100px / 100px 1fr 100px;
     }
     
     /* secondhand */
@@ -525,13 +384,10 @@ footer > img{
         font-size: 33px;
         font-weight: 900;
     }
-    #visflere{
-        font-size: 20px;
-        font-weight: 900;
-    }
     .secondhand{
-        grid-template: "title . . flere" auto
-                       "cover1 cover2 cover3 cover4" 500px / 1fr 1fr 1fr 1fr;
+        grid-template: "title flere" auto
+                       "cover1 cover2" 500px
+                       "cover3 cover4" 500px / 1fr 1fr;
         gap: 30px 74px;
     }
     .secondhand img{
@@ -541,88 +397,90 @@ footer > img{
     /* måneds bog */
     .harry div{
         grid-template-columns: repeat(2, auto);
-        column-gap: 100px;
     }
     .harry img{
         width: 300px;
     }
-    .overskrift{
-        font-size: 40px;
-    }
-    .forfatter{
-        font-weight: 700;
-        font-size: 20px;
-    }
-    .type{
-        font-weight: 700;
-        font-size: 20px;
-    }
-    .navn{
-        font-weight: 700;
-        font-size: 23px;
-    }
-    .typer{
-        font-weight: 700;
-        font-size: 23px;
-    }
-    .boginfo{
-        font-size: 20px;
-    }
-    .bestilbog .btn{
-        padding: 20px 40px;
-    }
     .infoombog{
         width: 536px;
-        grid-template: "overskrift overskrift" auto
-                       ". ." 20px
-                       "forfatter type" auto
-                       "navn typer" auto
-                       ". ." 50px
-                       "boginfo boginfo" auto
-                       ". ." 80px
-                       "bestilbog ." auto / 160px auto;
-        gap: 10px 30px;
-    }
-    .maanbog{
-        grid-template: "maan harry" auto / 627px 1254px;
-    }
-    .infoommaan div{
-        width: 240px;
     }
     
     /* bogklub */
     .bogklub p{
-        top: 45%;
-        left: 783px;
+        left: 300px;
         padding: 20px 50px;
         font-size: larger;
-        font-weight: 700;
     }
     
     /* footer */
-    .social{
-        place-self: end start;
-    }
     .social img{
         width: 50px;
     }
     .footgrid{
-        gap: 20px 100px;
-        grid-template: "hvor tid" auto
-                       "tlf social" auto
-                       "mail social" auto / max-content max-content;
+        gap: 20px 50px;
         font-size: 20px;
     }
     footer{
-        grid-template-columns: auto 580px;
-    }
-    .footgrid div p:first-child{
-        font-weight: 700;
+        grid-template-columns: auto auto;
     }
     .hvor h4{
         font-size: 25px;
     }
     footer img{
         display: inline;
+        width: 400px;
+    }
+}
+@media screen and (min-width: 1900px){
+    /* Header */
+    .headflex{
+        padding: 30px 150px;
+    }
+    
+    /* hero */
+    .hero img{
+        height: 900px;
+    }
+    .hero p{
+        top: 333.5px;
+        right: 476.5px;
+    }
+    
+    /* main grid */
+    main{
+        grid-template: ". . ." 170px
+                       ". secondhand ." auto
+                       ". . ." 170px
+                       "maanbog maanbog maanbog" auto
+                       ". . ." 170px
+                       "bogklub bogklub bogklub" auto
+                       ". . ." 170px / 200px 1fr 200px;
+    }
+    
+    /* secondhand */
+    .secondhand{
+        grid-template: "title . . flere" auto
+                       "cover1 cover2 cover3 cover4" 500px / 1fr 1fr 1fr 1fr;
+    }
+    
+    /* måneds bog */
+    .maanbog{
+        grid-template: "maan harry" auto / 627px 1254px;
+    }
+    
+    /* bogklub */
+    .bogklub p{
+        left: 783px;
+    }
+    
+    /* footer */
+    .footgrid{
+        gap: 20px 100px;
+    }
+    footer{
+        grid-template-columns: auto 580px;
+    }
+    footer > img{
+        width: auto;
     }
 }
